@@ -1,25 +1,28 @@
 #include<stdio.h>
 int main()
 {
-    int x,y,num,z;
+    int num,a,b,c;
     scanf("%d",&num);
     if(num==0 || num==1)
-    printf("True");
+    {
+        printf("True");
+    }
     else
     {
-        x=0;
-        y=1;
-        z=x+y;
-        while(z<num)
+        a=0;b=1;
+        c=a+b;
+        while(c<num)
         {
-            x=y;
-            y=z;
-            z=x+y;
+            a=b;
+            b=c;
+            c=a+b;
         }
-        if(z==num)
-        printf("True");
-        else
-        printf("False");
     }
+    if(c==num)
+    {
+        printf("True");
+    }
+    else
+    printf("False");
     return 0;
 }
