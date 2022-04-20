@@ -1,19 +1,19 @@
 #include<stdio.h>
 int main()
 {
-    int num,sum=0,d;
-    scanf("%d",&num);
-    while(num!=1 && num!=4)
+    int n,temp,rem,sum=0;
+    scanf("%d",&n);
+    while(n!=1 && n!=4)
     {sum=0;
-        while(num>0)
-        {
-            d=num%10;
-            sum+=d*d;
-            num=num/10;
+        while(n>0)
+        {  
+           rem=n%10;
+           sum=sum+rem*rem;
+           n=n/10;
         }
-        num=sum;
+        n=sum;
     }
-    if(num==1 || num==7)
+    if(sum==1 || sum==7)
     {
         printf("True");
     }
@@ -22,4 +22,5 @@ int main()
         printf("False");
     }
     return 0;
+    
 }
