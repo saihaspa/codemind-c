@@ -1,11 +1,16 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-    int n,i,k;
+    int n,k,i,flag=0;
     scanf("%d",&n);
-    k=sqrt(n);
-    if((k*k)==n)
+    for(i=0;i<n;i++)
+    {
+        if(i*i==n)
+        {
+            flag=1;
+        }
+    }
+    if(flag==1)
     {
         printf("True");
     }
