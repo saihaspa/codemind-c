@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,j,fc=0,c=0;
+    scanf("%d",&n);
+    for(i=1;i<n;i++)
+    {
+        if(n%i==0)
+        {
+            fc=0;
+            for(j=1;j<=i;j++)
+            {
+                if(i%j==0)
+                {
+                    fc++;
+                }
+            }
+            if(fc==2)
+            {
+                continue;
+            }
+            else
+            {
+                c++;
+            }
+        }
+    }
+    printf("%d",c+1);
+}
