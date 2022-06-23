@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n,x,rem,r=0,re,rev=0,f,temp,l,z,y,u,v;
+    scanf("%d%d",&n,&x);
+    temp=n;
+    while(n)
+    {
+        z=pow(10,x);
+        l=n%z;
+        break;
+    }
+    while(temp)
+    {
+        rem=temp%10;
+        rev=rev*10+rem;
+        temp/=10;
+    }
+    while(rev)
+    {
+        y=pow(10,x);
+        f=rev%y;
+        break;
+    }
+    while(f)
+    {
+        re=f%10;
+        r=r*10+re;
+        f/=10;
+    }
+    u=r-l;
+    v=l-r;
+    if(r>l)
+    {
+        printf("%d",u);
+    }
+    else
+    {
+        printf("%d",v);
+    }
+}
