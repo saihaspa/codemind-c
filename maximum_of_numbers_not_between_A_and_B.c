@@ -1,31 +1,34 @@
 #include<stdio.h>
 int main()
 {
-    int i,n,ar[100],a,b,max=-999999,d;
+    int n,i,arr[100],m,k,c=0,max=0;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
-        scanf("%d",&ar[i]);
+        scanf("%d",&arr[i]);
     }
-    scanf("%d%d",&a,&b);
+    scanf("%d%d",&m,&k);
     for(i=0;i<n;i++)
     {
-        if(ar[i]<a || ar[i]>b)
+        if(arr[i]<m || arr[i]>k)
         {
-            if(ar[i]>max)
+            c++;
+            if(arr[i]>max)
             {
-                max=ar[i];
-                d++;
+                max=arr[i];
             }
         }
+        else
+        {
+            continue;
+        }
     }
-    if(d>0)
-    {
-        printf("%d",max);
-    }
-    if(d==0)
+    if(c==0)
     {
         printf("-1");
     }
-    return 0;
+    else
+    {
+        printf("%d",max);
+    }
 }
