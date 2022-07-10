@@ -1,25 +1,25 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,rem,arr[100],c=0;
+    int n,i,a[100],c=0,rem;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
-        scanf("%d",&arr[i]);
+        scanf("%d",&a[i]);
     }
     for(i=0;i<n;i++)
-    { c=0;
-        if(arr[i]==0)
+    {
+        c=0;
+        if(a[i]==0)
         {
             c++;
         }
-        while(arr[i])
+        while(a[i])
         {
-            rem=arr[i]%10;
-            arr[i]/=10;
+            rem=a[i]%10;
             c++;
+            a[i]/=10;
         }
         printf("%d ",c);
     }
-    return 0;
 }
