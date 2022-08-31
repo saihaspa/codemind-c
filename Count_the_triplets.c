@@ -1,0 +1,42 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,t,a[100],c=0,b[100],j,k,m;
+    scanf("%d",&n);
+    for(m=0;m<n;m++)
+    {
+        scanf("%d",&t);
+        for(i=0;i<t;i++)
+        {
+            scanf("%d",&a[i]);
+        }
+        c=0;
+        for(i=0;i<t;i++)
+        {
+            for(j=i+1;j<t;j++)
+            {
+                for(k=0;k<t;k++)
+                {
+                    if((a[i]+a[j])==a[k])
+                    {
+                        c+=1;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+        }
+        if(c==0)
+        {
+            printf("-1");
+        }
+        else
+        {
+            printf("%d",c);
+        }
+        printf("
+") ;
+    }
+}
